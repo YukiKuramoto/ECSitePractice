@@ -50,6 +50,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/admin.php'));
+                //↑これでroutesディレクトリ内のadmin.phpに記述されるURLの頭に'admin'が付く
 
             Route::prefix('owner')
                 ->as('owner.')
